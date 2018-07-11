@@ -16,10 +16,10 @@
 
 $(call inherit-product, device/huawei/charlotte/full_charlotte.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common aoscp stuff.
+$(call inherit-product, vendor/aoscp/configs/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_charlotte
+PRODUCT_NAME := aoscp_charlotte
 PRODUCT_DEVICE := charlotte
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := P20 Pro
