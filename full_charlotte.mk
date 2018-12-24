@@ -26,4 +26,5 @@ $(call inherit-product, device/huawei/charlotte/device.mk)
 PRODUCT_DEVICE := charlotte
 PRODUCT_NAME := full_charlotte
 PRODUCT_BRAND := Huawei
-PRODUCT_MODEL := charlotte
+PRODUCT_MANUFACTURER := HUAWEI
+PRODUCT_MODEL := P20 Pro
