@@ -18,7 +18,7 @@
 set -e
 
 # Required!
-export DEVICE=berkeley
+export DEVICE=charlotte
 export DEVICE_COMMON=kirin970-common
 export VENDOR=huawei
 

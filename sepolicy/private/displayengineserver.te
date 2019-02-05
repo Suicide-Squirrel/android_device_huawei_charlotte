@@ -1,0 +1,34 @@
+type displayengineserver_exec, exec_type, file_type;
+
+typeattribute displayengineserver coredomain;
+typeattribute displayengineserver halclientdomain;
+
+# Allow for transition from init domain to displayengineserver
+init_daemon_domain(displayengineserver)
+
+# Allow displayengineserver to use binder service
+binder_use(displayengineserver)
+
+# Allow binder communication with surfaceflinger
+binder_call(displayengineserver, surfaceflinger)
+
+# Allow displayengineserver to add and find display_engine_service
+allow displayengineserver display_engine_service:service_manager { add find };
+
+# Allow displayengineserver to find displayengine_hwservice
+allow displayengineserver displayengine_hwservice:hwservice_manager find;
+
+# Allow displayengineserver to find surfaceflinger_service
+allow displayengineserver surfaceflinger_service:service_manager find;
+
+# Allow displayengineserver to find 3rd party apps hwservice
+allow displayengineserver untrusted_app_visible_hisi_hwservice:hwservice_manager find;
+
+# Allow displayengineserver to read inside /data/cust
+allow displayengineserver cust_data_file:lnk_file read;
+
+# Allow displayengineserver to call binder displayeffect
+binder_call(displayengineserver, displayeffect)
+
+# Allow displayengineserver to call binder hal_displayengine_default
+binder_call(displayengineserver, hal_displayengine_default)
