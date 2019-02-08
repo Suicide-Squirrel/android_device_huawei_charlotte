@@ -1,0 +1,6 @@
+type gpsdaemon, domain;
+
+type gpsdaemon_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(gpsdaemon)
+
+allow gpsdaemon default_prop:file r_file_perms;

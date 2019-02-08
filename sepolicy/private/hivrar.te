@@ -1,0 +1,6 @@
+type hivrar, domain;
+
+type hivrar_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hivrar)
+
+allow hivrar default_prop:file r_file_perms;

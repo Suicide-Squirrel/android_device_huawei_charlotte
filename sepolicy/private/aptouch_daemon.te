@@ -1,0 +1,6 @@
+type aptouch_daemon, domain;
+
+type aptouch_daemon_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(aptouch_daemon)
+
+allow aptouch_daemon system_prop:file r_file_perms;
