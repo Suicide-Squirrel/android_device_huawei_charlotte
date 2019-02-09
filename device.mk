@@ -27,5 +27,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 TARGET_SCREEN_HEIGHT := 2240
 TARGET_SCREEN_WIDTH := 1080
 
+# Display
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x04000000U
+
 # Inherit from kirin970-common
 $(call inherit-product, device/huawei/kirin970-common/kirin970.mk)
