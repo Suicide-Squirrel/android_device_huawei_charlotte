@@ -33,5 +33,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.sf.disable_hwcomposer=true
 
+# Live Wallpapers
+PRODUCT_PACKAGES += \
+    LiveWallpapersPicker
+
 # Inherit from kirin970-common
 $(call inherit-product, device/huawei/kirin970-common/kirin970.mk)
