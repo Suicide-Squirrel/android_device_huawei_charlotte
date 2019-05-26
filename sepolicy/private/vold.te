@@ -13,3 +13,6 @@ allow vold sys_block_sdd:file write;
 
 # Allow vold to write inside zram file system
 allow vold sysfs_zram:file write;
+
+# Allow vold to read boot logo
+allow vold splash2_data_file:dir read;

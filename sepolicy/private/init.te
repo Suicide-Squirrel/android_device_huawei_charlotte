@@ -24,3 +24,6 @@ allow init kernel:system module_request;
 allow hwsched system_data_file:lnk_file read;
 
 allow init sysfs_led:file setattr;
+
+# allow creating /sdcard symlink
+allow init tmpfs:lnk_file create;
