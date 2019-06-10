@@ -5,3 +5,9 @@ allow kernel dubai_log_device:chr_file { read write open };
 allow kernel device:chr_file { create setattr };
 allow kernel system_data_file:dir { create_dir_perms rw_dir_perms };
 allow kernel system_data_file:file create_file_perms;
+
+# Allow kernel to have read access to vendor partition
+allow kernel vendor_file:file { read open };
+
+# Allow kernel to search for the boot logo
+allow kernel splash2_data_file:dir { search read };
