@@ -20,7 +20,7 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 
-BOARD_KERNEL_CMDLINE := 
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -59,3 +59,9 @@ TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/Battery
 BOARD_CUSTOM_BOOTIMG_MK := device/huawei/charlotte/custombootimg.mk
 # MTP will not work until we update it to support ffs
 TW_EXCLUDE_MTP := true
+
+TARGET_RECOVERY_DEVICE_MODULES += strace debuggerd
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(TARGET_OUT_OPTIONAL_EXECUTABLES)/strace $(TARGET_OUT_EXECUTABLES)/debuggerd
+
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
