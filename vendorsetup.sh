@@ -1,0 +1,4 @@
+export ALLOW_MISSING_DEPENDENCIES=true
+export USE_NINJA=true
+
+add_lunch_combo omni_charlotte-userdebug
