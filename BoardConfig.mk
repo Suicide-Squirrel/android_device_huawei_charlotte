@@ -60,6 +60,14 @@ BOARD_CUSTOM_BOOTIMG_MK := device/huawei/charlotte/custombootimg.mk
 # MTP will not work until we update it to support ffs
 TW_EXCLUDE_MTP := true
 
+# SPECIAL FLAGS
+# ignore a factory reset when using the phone's factory reset screen
+# or since N (at least) when using <fastboot erase userdata> which set the same
+# https://gerrit.omnirom.org/#/c/20750/
+# this flag requires to build TWRP in branch 7.1 or later
+# DO NOT SET TO FALSE WHEN YOU DO NOT KNOW WHAT YOU'RE DOING!
+TW_IGNORE_MISC_WIPE_DATA := true
+
 TARGET_RECOVERY_DEVICE_MODULES += strace debuggerd
 TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(TARGET_OUT_OPTIONAL_EXECUTABLES)/strace $(TARGET_OUT_EXECUTABLES)/debuggerd
 
