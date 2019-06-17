@@ -1,3 +1,6 @@
+on boot
+    mkdir /system_root/system
+    
 on fs
     start fixlinks
 
