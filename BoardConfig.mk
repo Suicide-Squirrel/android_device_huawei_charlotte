@@ -53,7 +53,7 @@ TW_BRIGHTNESS_PATH := /sys/class/leds/lcd_backlight0/brightness
 TW_NO_HAPTICS := true
 TW_NO_SCREEN_BLANK := true
 TW_USE_TOOLBOX := true
-TW_DEFAULT_BRIGHTNESS := "2048"
+TW_DEFAULT_BRIGHTNESS := "150"
 TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/Battery
 # Device crashes if /sbin/modprobe is present so this is needed:
 BOARD_CUSTOM_BOOTIMG_MK := device/huawei/charlotte/custombootimg.mk
