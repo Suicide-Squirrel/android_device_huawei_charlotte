@@ -70,3 +70,6 @@ TW_EXCLUDE_MTP := true
 # this flag requires to build TWRP in branch 7.1 or later
 # DO NOT SET TO FALSE WHEN YOU DO NOT KNOW WHAT YOU'RE DOING!
 TW_IGNORE_MISC_WIPE_DATA := true
+
+# CRYPTO
+TW_INCLUDE_CRYPTO := true
