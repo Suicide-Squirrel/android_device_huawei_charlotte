@@ -1,0 +1,1 @@
+allow hwservicemanager rootfs:file { entrypoint execute read getattr open };

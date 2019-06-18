@@ -1,0 +1,9 @@
+allow kernel block_device:dir search;
+allow kernel tmpfs:dir search;
+allow kernel block_device:blk_file { read open ioctl };
+allow kernel device:chr_file { read write open create setattr };
+allow kernel rootfs:dir { write add_name create remove_name };
+allow kernel device:dir { write add_name };
+allow kernel self:capability mknod;
+allow kernel rootfs:file { create write unlink };
+allow kernel sysfs_devices_system_cpu:file write;

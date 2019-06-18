@@ -73,3 +73,10 @@ TW_IGNORE_MISC_WIPE_DATA := true
 
 # CRYPTO
 TW_INCLUDE_CRYPTO := true
+
+# SEPOLICY stuff
+# https://android.googlesource.com/platform/external/sepolicy/+/marshmallow-release/README
+BOARD_SEPOLICY_DIRS += device/huawei/charlotte/sepolicy
+# Ignore neverallow errors
+SELINUX_IGNORE_NEVERALLOWS := true
+
