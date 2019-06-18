@@ -83,3 +83,5 @@ BOARD_SEPOLICY_DIRS += device/huawei/charlotte/sepolicy
 # Ignore neverallow errors
 SELINUX_IGNORE_NEVERALLOWS := true
 
+# Extras
+TW_EXCLUDE_TWRPAPP := true
