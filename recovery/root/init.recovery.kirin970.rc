@@ -8,3 +8,7 @@ service fixlinks /sbin/fixlinks.sh
 
 service oeminfo_nvm /sbin/true
     disabled
+
+on boot
+    stop logd
+    stop teecd
