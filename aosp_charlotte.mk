@@ -16,10 +16,13 @@
 
 $(call inherit-product, device/huawei/charlotte/full_charlotte.mk)
 
-# Inherit some common aoscp stuff.
-$(call inherit-product, vendor/aoscp/configs/common_full_phone.mk)
+# Inherit some common aosp stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-PRODUCT_NAME := aoscp_charlotte
+PRODUCT_NAME := aosp_charlotte
 PRODUCT_DEVICE := charlotte
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := P20 Pro
+
+# Google Apps
+TARGET_GAPPS_ARCH := arm64
